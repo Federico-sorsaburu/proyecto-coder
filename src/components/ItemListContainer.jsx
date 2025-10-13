@@ -1,11 +1,12 @@
 import React from 'react'
+
 import '../css/hero.css'
 const ItemListContainer = ({ greeting = "¡Bienvenido a Mi Tienda!" }) => {
   return (
     <section className="hero">
       <div className="hero-inner container">
         <div className="hero-text">
-          <h1 className="hero-title">{greeting}</h1>
+          <h1 className="hero-title">{greeting} <span className='title'>Tecnologica</span> </h1>
           <p className="hero-sub">
              Innovación, diseño y rendimiento en un solo lugar.  
             Descubrí la nueva generación de tecnología pensada para potenciar tu día.
@@ -18,7 +19,7 @@ const ItemListContainer = ({ greeting = "¡Bienvenido a Mi Tienda!" }) => {
         </div>
 
         <div className="hero-image">
-          <img src="../public/hero.png" alt="Sofá verde moderno" />
+          <img src="../public/hero.png" alt="" />
         </div>
       </div>
     </section>

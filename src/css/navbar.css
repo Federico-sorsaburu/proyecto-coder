@@ -1,100 +1,127 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;900&display=swap');
+:root {
+    --white: #fff;
+    --light-gray: #efefef;
+    --gray: rgba(216, 215, 214, 0.3);
+    --gray2: #9c9c9c;
+    --primary-color: #4c957f;
+    --black: #1d1a1a;
+    --font: 'Red Hat Display', sans-serif;
+}
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+     font-family: var(--font);
 }
-.navbar {
-  background-color: #513488;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 60px;
-  font-family: "Poppins", sans-serif;
-}
+ body{
+    width: 100%;
+    height: 100vh;
+    background: var(--light-gray);
+    overflow: hidden;
+    
+ }
 
-.navbar-logo {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  color: #d1d1d1;
-  font-size: 14px;
-  cursor: pointer;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.navbar-links li:hover {
-  color: #ffffff;
-}
-
-.navbar-links .active {
-  color: #ffffff;
-}
-
-.navbar-links .active::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #f1c40f; 
-  margin: auto;
-  width: 22px;
-  border-radius: 2px;
+ header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    z-index: 1000;
+ }
+ header .btn-menu,
+ header .logo,
+ header .btn-group .btn-shop
+ {
+    text-decoration: none;
+    font-size: 2em;  
+    color: var(--white)
+ }
+header .btn-shop {
   
-}
-
-.navbar-icons {
-  display: flex;
-  align-items: center;
-    gap:20px;
-   
-  
-}
-
-.icon {
-  color: #ffffff;
-  font-size: 30px;
-  cursor: pointer;
-  
-  transition: transform 0.2s ease;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-}
-.cart-widget {
-  position: relative;
-  cursor: pointer;
-  font-size: 30px;  
- 
-   
-  
-  
-  
-}
-
-.cart-widget .cart-count {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background-color: #4ff10f;
-  color: #000;
-  font-size: 12px;
-  font-weight: bold;
+  background: var(--primary-color);
   border-radius: 50%;
-  padding: 2px 6px;
+  display: flex;
+  align-items: center;  
+  justify-content: center;  
+  color: var(--black);
  
+  padding: 15px;
+  cursor: pointer;
 }
+ header .logo{
+    text-decoration: none;
+    font-weight: bolder;
+ }
+ header .btn-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+ }
+ .btn-primary{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background: var(--primary-color);
+    padding: 15px 25px;
+    transition: 0.3s;
+    border-radius: 25px;
+    color:var(--white);
+
+ }
+ .btn-primary:hover{
+    background: var( --gray2);
+ }
+
+ .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    background: var(--gray);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    transition: 1s;
+    z-index: 1000;
+    padding-left: 70px;
+    transform: translateX(-100%);
+ }
+ .menu.active{
+     transform: translateX(0%);
+ }
+ .menu .btn-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 3em;
+    color: var(--black);
+ }
+ .menu ul{
+    list-style: none;
+ }
+ .menu ul li{
+    margin-bottom: 30px;
+     
+ }
+ .menu ul li a{
+   text-decoration: none;
+   font-size: 2.5em;
+   letter-spacing: 1px;
+   color: var(--black);
+   transition: 0.3s;
+     
+ }
+  .menu ul li a:hover{
+    color: var(--primary-color);
+    letter-spacing: 3px;
+  }

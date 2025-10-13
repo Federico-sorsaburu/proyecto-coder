@@ -1,19 +1,27 @@
-/* contenedor hero */
+
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 .hero {
   background: #191938; 
   color: #fff;
   padding: 4rem 1rem;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+   
+}
+.title{
+  color: aqua;
+  position: relative;
+  left: 50px;
+  font-size: 1.1em;
 }
 
-
 .container {
-  width: min(1200px, 95%);
+  width: 1300px;
   margin: 0 auto;
   display: flex;
   gap: 2rem;
+  
   align-items: center;
   justify-content: space-between;
 }
@@ -21,13 +29,15 @@
 
 .hero-text {
   flex: 1 1 45%;
-   
+    
+  
 }
 .hero-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: 5em;
+  text-transform: uppercase;
   margin: 0 0 1rem;
-  line-height: 1.05;
-  font-weight: 700;
+  line-height: 0.9;
+  font-weight: 900;
 }
 .hero-sub {
   color: rgba(255,255,255,0.85);
@@ -44,9 +54,7 @@
   font-weight: 600;
   margin-right: 0.75rem;
 }
-.btn-primary {
-  background: #f6c04d; color: #111;
-}
+
 .btn-outline {
   border: 2px solid rgba(255,255,255,0.2);
   color: #fff;
