@@ -20,6 +20,7 @@
     height: 100vh;
     background: var(--light-gray);
     overflow: hidden;
+      overflow-y: auto;
     
  }
 
