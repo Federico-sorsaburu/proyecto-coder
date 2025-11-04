@@ -1,6 +1,6 @@
  
 import './App.css'
-import Chatbot from './components/chatbot'
+ 
 import Hero from './components/Hero'
 import ItemCount from './components/ItemCount'
 import ItemListContainer from './components/ItemListContainer'
@@ -14,11 +14,9 @@ function App() {
   return (
     <>
    <Navbar/>
- 
    <Hero greeting="Tienda "/>
-    <ItemListContainer greeting="Tienda "/>
+    <ItemListContainer saludar='Federico'/>
     <ItemCount/>
-   
     </>
   )
 }

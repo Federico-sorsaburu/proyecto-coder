@@ -7,7 +7,7 @@ const productos = [
     descripcion: "Intel i5, 8GB RAM, 512GB SSD",
     precio: 75000,
     stock: 10,
-    imagen: "/images/lenovo-ideapad.jpg"
+    img: "https://i.postimg.cc/NG7GvFNt/producto1.png"
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const productos = [
     descripcion: "Chip Apple M2, 8GB RAM, 256GB SSD",
     precio: 220000,
     stock: 5,
-    imagen: "/images/macbook-air.jpg"
+    img: "https://i.postimg.cc/wB736z1F/producto2-removebg-preview.png"
   },
 
 
@@ -27,7 +27,7 @@ const productos = [
     descripcion: "AMD Ryzen 7, 16GB RAM, RTX 3060, SSD 1TB",
     precio: 180000,
     stock: 5,
-    imagen: "/images/dell-gamer.jpg"
+    img: "https://i.postimg.cc/s1dgmGKC/producto4-removebg-preview.png"
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const productos = [
     descripcion: "Intel i5, 8GB RAM, SSD 512GB",
     precio: 85000,
     stock: 12,
-    imagen: "/images/lenovo-office.jpg"
+    img: " https://i.postimg.cc/s1dgmGKC/producto4-removebg-preview.png"
   },
 
   {
@@ -46,7 +46,7 @@ const productos = [
     descripcion: "Compatible con AMD Ryzen",
     precio: 20000,
     stock: 8,
-    imagen: "/images/asus-b550.jpg"
+    img: "https://i.postimg.cc/15BzwX6r/producto5.png"
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ const productos = [
     descripcion: "12GB GDDR6, ideal para gaming y diseño",
     precio: 120000,
     stock: 3,
-    imagen: "/images/rtx-3060.jpg"
+    img: "https://i.postimg.cc/VLm6JnS6/producto6.png"
   },
 
 
@@ -66,7 +66,7 @@ const productos = [
     descripcion: "RGB, switches azules",
     precio: 12000,
     stock: 15,
-    imagen: "/images/teclado-logitech.jpg"
+    img: "https://i.postimg.cc/j2QS8d1W/producto7.png"
   },
   {
     id: 8,
@@ -75,7 +75,7 @@ const productos = [
     descripcion: "Sensor óptico 16000 DPI, RGB",
     precio: 9000,
     stock: 20,
-    imagen: "/images/mouse-razer.jpg"
+    img: "https://i.postimg.cc/RFJ3Tm9K/producto8-removebg-preview.png"
   },
 
   {
@@ -85,7 +85,7 @@ const productos = [
     descripcion: "Pantalla IPS, 4K, 60Hz",
     precio: 45000,
     stock: 6,
-    imagen: "/images/monitor-lg.jpg"
+    img: "https://i.postimg.cc/J4VXPssz/producto9-removebg-preview-1.png"
   },
   {
     id: 10,
@@ -94,6 +94,20 @@ const productos = [
     descripcion: "USB, sonido envolvente, microfono",
     precio: 8000,
     stock: 10,
-    imagen: "/images/auriculares-hyperx.jpg"
+    img: "https://i.postimg.cc/VkzCP29h/producto9-removebg-preview.png"
   }
 ];
+
+export const getProducts = () =>{
+  let error = false;
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if(error){
+          reject('Hubo un error, Intente mas tarde')
+        }else{
+          resolve(productos)
+        }
+
+      },2000)
+    })
+}
