@@ -1,10 +1,11 @@
 import React from "react";
- 
+import '../css/card.css'
 
-const Item = ({ prod }) => {
+const Item = ({ prod  }) => {
   const { nombre, precio, descripcion } = prod;
-
+ 
   return (
+    
     <div className="card">
       <img src={prod.img} alt={nombre} className="card-img" />
 
